@@ -2,7 +2,8 @@ if(document.getElementsByTagName('iframe')[0].contentWindow.snarggAdapter != und
   console.log('lesson compatable')
 csid = document.getElementsByTagName('iframe')[0].src.split('csid=')[1].split('&type')[0];
 csid = csid.replaceAll('.', '_');
-csid2 = csid.split('_v2')[0];
+csid = csid.split('_v2')[0];
+csid2 = csid.replaceAll('_phx')
 
 // gets all units
 // gets all units
