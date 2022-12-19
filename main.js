@@ -2,7 +2,7 @@ if(document.getElementsByTagName('iframe')[0].contentWindow.snarggAdapter != und
   console.log('lesson compatable')
 csid = document.getElementsByTagName('iframe')[0].src.split('csid=')[1].split('&type')[0];
 csid = csid.replaceAll('.', '_');
-csid2 = "DI_MATH_NO_5_1200_20"
+csid2 = csid.split('_10', '_20')[0];
 
 // gets all units
 // gets all units
@@ -16,7 +16,7 @@ fetch("https://cdn.i-ready.com/instruction/phoenix/master/121/lessonmap.json")
         if(csid.includes('undefined')==true){console.log('true')}
         // loops through every lesson in unit
         function listLessons(i = 0, j = 0) {
-            fetch('https://api.allorigins.win/raw?url=https://cdn.i-ready.com/instruction/phoenix-content/math/DI_MATH_NO_5_1200_20/lessonStructure.json')
+            fetch('https://api.allorigins.win/raw?url=https://cdn.i-ready.com/instruction/phoenix-content/math/'+csid2+'/lessonStructure.json')
                 .then(response => response.json())
                 .then(function(lessonData) {
                   document.getElementsByTagName('iframe')[0].contentWindow.snarggAdapter.StateStore.deleteState()
