@@ -1,2 +1,2 @@
-i just fixed the snarggapi skipper xd
-MADE BY WHOEVER TF I FORKED IT FROM
+## MADE BY H, I JUST FIXED THE CSID ISSUE 
+it kinda works
